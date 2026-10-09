@@ -1,11 +1,11 @@
-package Oskar_CZ_OTM.platform.services;
+package Oskar_CZ_OTM.services.types;
 
 public interface IPlatformHelper {
 
     /**
-     * Gets the name of the current platform
+     * Gets the name of the current types
      *
-     * @return The name of the current platform.
+     * @return The name of the current types.
      */
     String getPlatformName();
 

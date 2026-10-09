@@ -1,5 +1,6 @@
 package Oskar_CZ_OTM;
 
+import Oskar_CZ_OTM.services.NeoForgeRegistryHelper;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
@@ -15,6 +16,8 @@ public class TrueBackrooms {
         // Use NeoForge to bootstrap the Common mod.
         Constants.LOG.info("Hello NeoForge world!");
         CommonClass.init();
+
+        NeoForgeRegistryHelper.register(eventBus);
 
     }
 }

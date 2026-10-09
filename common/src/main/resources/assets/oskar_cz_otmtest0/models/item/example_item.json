@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "oskar_cz_otmtest0:item/example_item"
+  }
+}

@@ -1,6 +1,6 @@
-package Oskar_CZ_OTM.platform;
+package Oskar_CZ_OTM.services;
 
-import Oskar_CZ_OTM.platform.services.IPlatformHelper;
+import Oskar_CZ_OTM.services.types.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 
