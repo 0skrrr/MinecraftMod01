@@ -1,0 +1,56 @@
+package dev.turtywurty.tutorialmod.datagen;
+
+import dev.turtywurty.tutorialmod.Constants;
+import dev.turtywurty.tutorialmod.init.ModBlocks;
+import dev.turtywurty.tutorialmod.init.ModCreativeTabs;
+import dev.turtywurty.tutorialmod.init.ModEntityTypes;
+import dev.turtywurty.tutorialmod.init.ModItems;
+import net.minecraft.data.PackOutput;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+
+public class TutorialModEnglishLanguageProvider extends LanguageProvider {
+    public TutorialModEnglishLanguageProvider(PackOutput output) {
+        super(output, Constants.MOD_ID, "en_us");
+    }
+
+    @Override
+    protected void addTranslations() {
+        add(ModItems.EXAMPLE_ITEM.get(), "Example Item");
+        add(ModItems.EXAMPLE_ITEM2.get(), "Example Item 2");
+        add(ModBlocks.EXAMPLE_BLOCK.block().get(), "Example Block");
+        add(ModBlocks.EXAMPLE_BLOCK.item().get(), "Example Block");
+        add(ModBlocks.EXAMPLE_OVERWORLD_ORE.block().get(), "Example Overworld Ore");
+        add(ModBlocks.EXAMPLE_OVERWORLD_ORE.item().get(), "Example Overworld Ore");
+        add(ModBlocks.EXAMPLE_DEEPSLATE_ORE.block().get(), "Example Deepslate Ore");
+        add(ModBlocks.EXAMPLE_DEEPSLATE_ORE.item().get(), "Example Deepslate Ore");
+        add(ModBlocks.EXAMPLE_NETHER_ORE.block().get(), "Example Nether Ore");
+        add(ModBlocks.EXAMPLE_NETHER_ORE.item().get(), "Example Nether Ore");
+        add(ModBlocks.EXAMPLE_END_ORE.block().get(), "Example End Ore");
+        add(ModBlocks.EXAMPLE_END_ORE.item().get(), "Example End Ore");
+        add(ModEntityTypes.EXAMPLE_ENTITY.get(), "Example Entity");
+        add(ModItems.EXAMPLE_SWORD.get(), "Example Sword");
+        add(ModItems.EXAMPLE_SPEAR.get(), "Example Spear");
+        add(ModItems.EXAMPLE_PICKAXE.get(), "Example Pickaxe");
+        add(ModItems.EXAMPLE_SHOVEL.get(), "Example Shovel");
+        add(ModItems.EXAMPLE_AXE.get(), "Example Axe");
+        add(ModItems.EXAMPLE_HOE.get(), "Example Hoe");
+        add(ModItems.EXAMPLE_HELMET.get(), "Example Helmet");
+        add(ModItems.EXAMPLE_CHESTPLATE.get(), "Example Chestplate");
+        add(ModItems.EXAMPLE_LEGGINGS.get(), "Example Leggings");
+        add(ModItems.EXAMPLE_BOOTS.get(), "Example Boots");
+        add(ModCreativeTabs.EXAMPLE_TAB.get().getDisplayName(), "Example Tab");
+        add(ModItems.EXAMPLE_FOOD.get(), "Example Food");
+        add(ModItems.EXAMPLE_ENTITY_SPAWN_EGG.get(), "Example Entity Spawn Egg");
+        add(ModBlocks.EXAMPLE_FLOWER.block().get(), "Example Flower");
+        add(ModBlocks.EXAMPLE_FLOWER.item().get(), "Example Flower");
+        add(ModBlocks.POTTED_EXAMPLE_FLOWER.get(), "Potted Example Flower");
+    }
+
+    private void add(Component component, String value) {
+        if (component.getContents() instanceof TranslatableContents translatableContents) {
+            add(translatableContents.getKey(), value);
+        }
+    }
+}
